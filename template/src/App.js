@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react'; 
+import ReactDOM from 'react-dom';
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Films from "./pages/films";
+import Layout from "./pages/layout";
+import Actor from "./pages/actors";
+import Add from "./pages/search_films";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/films" element={<Films />} />
+          <Route path="/actors" element={<Actor />} />¨
+          <Route path="/search_films" element={<Add />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    
   );
+ 
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+
+
+

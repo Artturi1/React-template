@@ -1,0 +1,199 @@
+
+/* fontit */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* perus asioita */
+
+
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.tietoa, .harrastukset, .galleria, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.tietoa .tietoa-content,
+.harrastukset .harrastus-content,
+.galleria .kuva-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+
+/* Navigointi */
+
+
+.navigointi{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navigointi .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigointi .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navigointi .logo a span{
+    color: #FFE4E1;
+    transition: all 0.3s ease;
+}
+.navigointi.sticky .logo a span{
+    color: #fff;
+}
+.navigointi .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navigointi .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navigointi .menu li a:hover{
+    color: white;
+}
+.navigointi.sticky .menu li a:hover{
+    color: #fff;
+}
+
+
+/* home */
+
+
+.home{
+    display: flex;
+    background: url("CQx.gif") no-repeat center;
+    height: 100vh;
+    color: #111;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* Tietoa */
+
+
+.tietoa {
+    color:#fff;
+    background: rgb(6, 51, 0);
+}
+
+.tietoa .tietoa-content .left{
+    width: 45%;
+}
+.tietoa .tietoa-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.tietoa .tietoa-content .right{
+    width: 55%;
+}
+.tietoa .tietoa-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.tietoa .tietoa-content .right .text span{
+    color: crimson;
+}
+.tietoa .tietoa-content .right p{
+    text-align: justify;
+}
+.tietoa .tietoa-content .right a{
+    display: inline-block;
+    background: #111;
+    color: #111;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.tietoa .tietoa-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+.hakemisto {
+    background-color: #92010c;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+  }
+.data_style{
+    text-indent: 50px;
+    text-decoration-line: underline;
+    text-decoration-color: #92010c; 
+    width: 320px;
+    padding: 10px;
+    border: 5px solid #20aad8;
+    margin: 50px;
+    display: inline-table;
+    text-indent: 10px;
+}
+
+
+
+
